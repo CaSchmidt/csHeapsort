@@ -35,7 +35,7 @@ void sink(int *data, int k, const int N)
 {
   while( 2*k+1 < N ) {
     int child = 2*k+1;
-    if( child < N-1  &&  less(data, child, child+1) ) {
+    if( child+1 < N  &&  less(data, child, child+1) ) {
       child++;
     }
     if( !less(data, k, child) ) {

@@ -57,7 +57,7 @@ void AnimationBase::sink(QString& data, int k, const int N, const int delay)
 {
   while( 2*k+1 < N ) {
     int child = 2*k+1;
-    if( child < N-1  &&  less(data, child, child+1) ) {
+    if( child+1 < N  &&  less(data, child, child+1) ) {
       child++;
     }
     if( !less(data, k, child) ) {
